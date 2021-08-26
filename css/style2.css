@@ -1,0 +1,271 @@
+html {
+  font-family: arial;
+}
+
+body {
+  margin: 0;
+}
+
+header {
+  background-color: #ffc963;
+  height: 50px;
+  position: relative;
+  width: 100%;
+  z-index: 2;
+}
+
+header img {
+  padding-top: 10px;
+  padding-left: 75px;
+  width: 110px;
+  height: 30px;
+}
+
+article {
+  margin-left: 310px;
+  padding: 0px 20px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/* Fixed sidenav, full height */
+nav {
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  padding-top: 30px;
+  border-right: 3px solid;
+  border-color: #ffc963;
+}
+
+/* Style the sidenav links and the dropdown button */
+nav li, nav a, .dropdown-btn {
+  padding: 12px 15px 12px 7px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-family: arial;
+}
+
+nav a , .dropdown-btn {
+  cursor: pointer;
+}
+
+nav a:hover, .dropdown-btn:hover {
+  color: #ffc963;
+}
+
+.active {
+  border-bottom: 4px solid;
+  border-color: #ffc963;
+  color: black;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: white;
+  padding-left: 40px;
+}
+
+.fa-angle-down {
+  float: right;
+  padding-right: 8px;
+  color: #eb7623;
+}
+
+.fa-user-cog, .fa-user, .fa-user-plus, .fa-newspaper, .fa-users, .add .fa-donate {
+  font-size: 70px;
+  color: #eb7623;
+}
+
+.fa-home, .fa-user-circle, .fa-donate, .fa-sign-out-alt, .fa-edit, .fa-user-edit, .fa-comments {
+  color: #eb7623;
+}
+
+@media screen and (max-height: 450px) {
+  nav {padding-top: 30px;}
+  nav a {font-size: 18px;}
+}
+
+.container {
+  height: 170px;
+  width: 170px;
+  border-radius: 20px;
+  background-color: #ffc963;
+}
+
+.container h1 {
+  margin: 0;
+  padding-top: 30px;
+  font-size: 50px;
+}
+
+.column {
+  float: left;
+  width: 200px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.needapp {
+  border-collapse: collapse;
+  width: 99%;
+}
+
+.needapp td, .needapp th {
+  padding : 13px;
+  text-align: center;
+}
+
+.needapp tr:nth-child(odd) { 
+  background-color: #f2f2f2;
+}
+
+.needapp tr:hover {
+  background-color: #ddd;
+}
+
+.needapp th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #c7ccb9;
+}
+
+.needapp button {
+  margin: 5px;
+}
+
+/*add*/
+.add input[type=text], input[type=password], textarea, select, datalist, input[type=number], input[type="tel"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.add input[type=submit] {
+  width: 100%;
+  background-color: #eb7623;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add input[type=submit]:hover {
+  background-color: #ffc963;
+  color: black;
+}
+
+#custom {
+  width: 20%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#custom:hover {
+  background-color: #ffc963;
+}
+
+.add {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+/*end add*/
+
+.sah {
+  background-color: #F9E79F;
+  border: none;
+  color: black;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.sah:hover {
+  background-color: #F4D03F;
+  color: white;
+}
+
+.reject {
+  background-color: #E9967A;
+  border: none;
+  color: black;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.reject:hover {
+  background-color: #C35847;
+  color: white;
+}
+
+.carian input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  width: 70%;
+  background: #f1f1f1;
+}
+
+.carian button {
+  width: 10%;
+  padding: 10px;
+  background: #ffc963;
+  color: black;
+  font-size: 17px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+
+.carian button:hover {
+  background: #eb7623;
+  color: white;
+}
+
+.carian::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+

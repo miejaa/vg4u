@@ -1,0 +1,391 @@
+/* CSS Document */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #C9E2BB;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #E3E3E3;
+    color: #000000;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.utama .kanan {
+    float: right;
+    width: 50%;
+}
+
+
+@media screen and (max-width : 1080px ){
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width : 1080px ){
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+	#bannerdon{
+		display: none;
+	}
+
+
+}
+
+/* filter */
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+
+aside
+{
+    float: left;
+    margin-left: 10px;
+    width: 20%;
+}
+
+@media screen and (max-width : 1080px ){
+
+	aside{
+		width:95%;
+		
+	}
+}
+
+
+/*gambaq donation*/
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 68px;
+    margin-left: 110px;
+}
+
+.flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+    margin-left: 70px;
+}
+
+.flex-item-right {
+    background-color: #EBEBEB;
+    padding: 10px;
+    flex: 50%;
+    margin-left: 70px;
+}
+
+
+section{
+    float: left;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+	
+	section{
+	
+	margin-left: 5px;
+}
+	flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2px;
+    margin-left: 10px;
+}
+
+.flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 50%;
+    margin-left: 10px;
+}
+
+.flex-item-right {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 50%;
+    margin-left: 10px;
+}
+	
+}
+
+
+.resithead {
+    background-color: #C9E2BB;
+    width: 100%;
+    margin-left: -1px;
+}
+
+.resithead h1{
+    float: left;
+    margin-left: 158px;
+    margin-top: 138px;
+    font-size: 53px;
+    color: #737373;
+}
+
+
+
+
+#disk_d {
+    margin-left: 44px;
+}
+.resithead2 {
+    background-color: #6EA56F;
+    width: 100%;
+    margin-left: -1px;
+    margin-top: -10px;
+}
+
+.resithead2 .donmeter h1{
+    float: left;
+    font-size: 53px;
+    border: 2px solid white;
+    padding-top: 99px;
+    padding-right: 99px;
+    padding-left: 99px;
+    padding-bottom: 99px;
+    border-radius: 13px;
+    margin-left: 110px;
+}
+
+.resithead2 img{
+    float: right;
+    margin-right: 149px;
+}
+
+
+
+.besidedon {
+    width: 53%;
+    margin-top: 102px;
+    margin-left: -36px;
+}
+
+.besidedon h2 {
+    font-size: 65px;
+    text-align: center;
+    color: #F4F4F4;
+}
+
+.besidedon h3 {
+    font-size: 35px;
+    text-align: center;
+    margin-right: 6px;
+    color: #FFFFFF;
+    margin-top: -39px;
+}
+
+.donmeter label {
+    color: #FFFFFF;
+	
+	
+}
+
+.thanks h1{
+    margin-left: 550px;
+    font-weight: bold;
+    border-left-color: #EC1619;
+    border-right-color: #EC1619;
+    border-bottom: thick solid #6EA56F;
+    border-top-color: #EC1619;
+    padding-bottom: 16px;
+}
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 690px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+
+
+@media screen and (max-width : 1080px ){
+
+.resithead h1{
+  
+    margin-left: 40px;
+    margin-top: 70px;
+    font-size: 35px;
+    color: #737373;
+}
+
+.resithead img{
+    
+    float: right;
+    margin-right: 170px;
+	width:145px;
+	height: 145px;
+}
+.resithead2 .donmeter h1{
+    float: left;
+    font-size: 33px;
+    border: 2px solid white;
+	padding: 30px;
+ 
+}
+	.donmeter{
+		margin-left: -20px;
+	}
+
+.besidedon {
+    width: 100%;
+    margin-top: -34px;
+    margin-left: -2px;
+}
+
+.besidedon h2 {
+    font-size: 45px;
+    text-align: center;
+    color: #F4F4F4;
+}
+
+.besidedon h3 {
+    font-size: 25px;
+    text-align: center;
+    margin-right: 6px;
+    color: #FFFFFF;
+    margin-top: -39px;
+}
+	
+.thanks h1{
+    margin-left: 24px;
+    font-weight: bold;
+    border-left-color: #EC1619;
+    border-right-color: #EC1619;
+    border-bottom: thick solid #6EA56F;
+    border-top-color: #EC1619;
+    padding-bottom: 16px;
+}
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 160px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}	
+
+
+}
+
+footer {
+  background: #87A878; 
+  bottom: 0;
+  padding:5px;
+  width: 100%;
+}
+
+footer p { 
+  text-align:center;
+  color:#ffff;
+  font-size: 14px;
+}
+
+.secfooter {
+	width: 100%;
+}
+
+.utama {
+    width: 100%;
+    margin-left: -15px;
+}
+
+#bannerdon {
+    width: 102%;
+	
+}
