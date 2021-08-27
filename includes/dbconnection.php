@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
-$username= "root";
-$password= "";
-$dbname = "munity";
+$host = "vg4u.cfjqjsjwvoi4.ap-southeast-1.rds.amazonaws.com";
+$username= "admin";
+$password= "vg4u1234";
+$dbname = "vg4u";
 $conn = mysqli_connect($host,$username, $password,$dbname);
 
 // Check connection
