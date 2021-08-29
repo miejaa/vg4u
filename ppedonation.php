@@ -170,6 +170,12 @@ if ($row == 0)
 							<progress value="<?php echo $helo?>" max="<?php echo $goal?>" data-text="RM<?php echo $helo?> / RM<?php echo $goal?>"></progress>
 							<br><br><br><br>
 							
+							<h1>Details </h1>
+							<hr>
+							<p class="fstyle"><b>Donation Type: </b><?php echo  $row['donation_type']; ?> </p>
+							<p class="fstyle"><b>Donation Region: </b><?php echo  $row['donation_region']; ?> </p>
+							<p class="fstyle"><b>Donation Start Date: </b><?php echo  $row['donation_date']; ?> </p>
+							
 							<button onclick="document.getElementById('donatefill').style.display='block'">Donate</button>	
 							<div id="donatefill" class="modal">
 							  <span onclick="document.getElementById('donatefill').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -227,6 +233,7 @@ if ($row == 0)
 
 					</div>
 				</div>
+				<br><br><br>
 			</article>
 		</section>
 		<footer>
