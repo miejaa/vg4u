@@ -1,20 +1,20 @@
 <?php
-//Initialise the session
-session_start();
-include("includes/dbconnection.php");
-$sql = "SELECT * FROM users WHERE username='".$_SESSION['username']."'";
-$result = mysqli_query($conn, $sql) or die ("Error running MySQL query");
-//Fetches a result row as an associative array
-$row = mysqli_fetch_assoc($result);
-if ($row == 0)
-	{
-		echo "Login Fail";
-		session_unset();
-		//echo "<meta httpequiv=\"refresh\"content=\"3;URL=login.php\">";
-		header('Refresh:2; url=login.php');
-	}
-		else
+	//Initialise the session
+	session_start();
+	include("includes/dbconnection.php");
+	$sql = "SELECT * FROM users WHERE username='".$_SESSION['username']."'";
+	$result = mysqli_query($conn, $sql) or die ("Error running MySQL query");
+	//Fetches a result row as an associative array
+	$row = mysqli_fetch_assoc($result);
+	if ($row == 0)
 		{
+			echo "Login Fail";
+			session_unset();
+			//echo "<meta httpequiv=\"refresh\"content=\"3;URL=login.php\">";
+			header('Refresh:2; url=login.php');
+		}
+			else
+			{
 ?>	
 <!DOCTYPE html>
 <html>
@@ -29,12 +29,12 @@ if ($row == 0)
 		<script src="javaku.js"></script>
 		<style>
 		body {
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  overflow-x: hidden;
-}
+			  margin: 0;
+			  width: 100%;
+			  height: 100%;
+			  padding: 0px;
+			  overflow-x: hidden;
+			}
 		</style>
 </head>
 	<body>
@@ -69,9 +69,7 @@ if ($row == 0)
     <th style="width:40%;">Region</th>
   </tr>
 	
-	<?php
-						
-					
+	<?php	
 					//$result = mysqli_query($conn, $sql);
 					//$resultCheck = mysqli_num_rows($result);
 
@@ -95,12 +93,13 @@ if ($row == 0)
   ?>
 </table>
 </aside>
-<section>
-	<div class="flex-container">
-	<div class="row">
+<article>
+	<center><div class="flex-container">
+	<br><br><br><br>
+		<div class="row">
+		<div class="column">
 	<?php
-						
-					
+							
 					//$result = mysqli_query($conn, $sql);
 					//$resultCheck = mysqli_num_rows($result);
 
@@ -124,8 +123,9 @@ if ($row == 0)
 //mysql_close($conn);
 ?>
 </div>
-</div>	
-</section>	
+		</div>
+	</div></center>	
+</article>	
 	
 </section>
 	

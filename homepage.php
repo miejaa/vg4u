@@ -1,3 +1,9 @@
+<?php
+	//Initialise the session
+	session_start();
+	include("includes/dbconnection.php");
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -54,6 +60,46 @@
 						    	<p>Non-Governmental Organization (NGO) in Malaysia provides help and supports to people in need. Here list of NGOs in Malaysia.</p>
 							</div>
 						</div>
+					</div>				
+				</div>
+				</center>
+			</article>
+		</section>
+		<section>
+			<article>
+				<center>
+				<h1 id="h-PPE">DONATION RECEIVED</h1>
+				<hr>
+				<div class="icons">
+					<div class="row">
+							<?php
+												
+								//$result = mysqli_query($conn, $sql);
+								//$resultCheck = mysqli_num_rows($result);
+
+								$sql = "SELECT SUM(donation_amount) FROM donationstatus;";
+								$result = mysqli_query($conn, $sql) or die ("Error running MySQL query");
+							
+								//$result = mysqli_query("SELECT * FROM user") or die ("Error running MySQL query");
+								while($row = mysqli_fetch_assoc($result))
+								{				
+									$helo = $row['SUM(donation_amount)'];
+									
+									echo "<div class='flex-item-left-sum'>";
+									echo "<center><p><b>RM&nbsp;" .$helo."</b></p></center>";
+									echo "</div></a>";
+									echo "<br>";
+								}
+								//Closes specified connection
+								//mysql_close($conn);
+							?>
+							<div class="lastupdated">
+								<p><i>last updated:<p id="demo"></p></i></p>
+								<script>
+									const d = new Date();
+									document.getElementById("demo").innerHTML = d;
+								</script>
+							</div>
 					</div>				
 				</div>
 				</center>

@@ -63,7 +63,7 @@
 				?>
 			</table>
 		</aside>
-	<section>
+	<article>
 	<center><div class="flex-container">
 	<br><br><br><br>
 		<div class="row">
@@ -93,7 +93,7 @@
 		</div>
 		</div>
 	</div></center>
-	</section>
+	</article>
 	 <!--<article>
 		  <form method="post">
 			<!--<div class="row">-->

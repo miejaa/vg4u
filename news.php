@@ -41,18 +41,18 @@ include("includes/dbconnection.php");
 				<!-- MAIN (Center website) -->
 				<div class="news">
                 <div class="main">
-				<div id="myBtnContainer">
+				<center><div id="myBtnContainer">
                 <button class="btn" onclick="filterSelection('all')"> Show all</button>
                 <button class="btn" onclick="filterSelection('north')"> Northern Region</button>
 				<button class="btn" onclick="filterSelection('centre')"> Central Region</button>
                 <button class="btn" onclick="filterSelection('eastcoast')"> East Coast</button>
                 <button class="btn" onclick="filterSelection('south')"> Southern Region</button>
 				<button class="btn" onclick="filterSelection('ss')"> Sabah and Sarawak</button>
-                </div>
+                </div></center>
 				</div>
 
                 <!-- Portfolio Gallery Grid -->
-                <div class="row">
+<div class="row">
               
 				<?php
 						
@@ -148,7 +148,7 @@ include("includes/dbconnection.php");
 					?>
 					
 <!-- END GRID -->
-                </div>
+</div>
 
 <!-- END MAIN -->
 				</div>
