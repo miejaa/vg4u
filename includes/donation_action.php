@@ -38,9 +38,12 @@ $results = mysqli_query($conn,$query);
     
   }
 
- $sql =("INSERT INTO donationstatus (donation_amount, donation_id, user_id, pay, name, phone) VALUES ('$amount', '".$_GET['donation_id']."','$user_id','$pay', '$name', '$phone')")  or die ("Error inserting data into table");
+$sql =("INSERT INTO donationstatus (donation_amount, donation_id, user_id, pay, name, phone) VALUES ('$amount', '".$_GET['donation_id']."','$user_id','$pay', '$name', '$phone')")  or die ("Error inserting data into table");
 mysqli_query($conn, $sql);
-	
+
+$sql1 =("INSERT INTO transaction_history (user_id, , donation_id, donation_amount) VALUES ('$user_id', '".$_GET['donation_id']."', '$amount')")  or die ("Error inserting data into table");
+mysqli_query($conn, $sql1);
+
 //Closes specified connection
 
 echo "<script>alert('Donation Successful');</script>";

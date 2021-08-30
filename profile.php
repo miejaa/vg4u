@@ -83,7 +83,7 @@ if ($row == 0)
 							<label for="phone">Phone number</label><br>
 							<input type="tel" id="phone" name="phone" value="<?php echo $row['phone']; ?> " patern="[0-9]{3}[0-9]{3}[0-9]{4}" minlength="9" maxlength="11" readonly><br><br>	
 							<button onclick="document.location='updateprofile.php'">I want to update my profile</button>
-							<!--<button style="float: right" onclick="document.location='history.php'">Donation History</button>-->
+							<button style="float: right" onclick="document.location='history.php'">Donation History</button>
         				</div>
 					<?php
 						}}

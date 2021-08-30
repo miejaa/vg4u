@@ -76,7 +76,7 @@ echo '<script language="javascript"> window.location.href="../homepage.php "</sc
 				</div>
 			</li>
 			<li><a href="admin_suggestion.php"><i class="fas fa-comments"></i>  View Suggestion</a></li>
-			<li><a href="../includes/logout.php"><i class="fas fa-sign-out-alt"></i>  Logout</a></li>
+			<li><a href="../includes/logout.php"><i class="fas fa-sign-out-alt"></i>  Logout</a></li><br><br>
 		</nav>
 
 		<section>

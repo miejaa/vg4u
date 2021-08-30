@@ -57,18 +57,18 @@ if ($row == 0)
 				<div class="logincontainer">
 					<div class="row">
 					<h2><center>Donation History</center></h2>
-				<table class="needapp">
-					<tr>
-						<th>No.</th>
-						<th>Donation Title</th>
-						<th>Amount</th>
-						<th>Payment Method</th>
-						<th>Date</th>
+				<table class="needapp" align="center" border="0" width="90%" cellpadding="10" cellspacing="0">
+					<tr align="center">
+						<th width="7%" style="background-color: #f7e3b5;">No.</th>
+						<th width="20%" style="background-color: #f7e3b5;">Donation Title</th>
+						<th width="5%" style="background-color: #f7e3b5;">Amount</th>
+						<th width="20%" style="background-color: #f7e3b5;">Payment Method</th>
+						<th width="20%" style="background-color: #f7e3b5;">Date</th>
 					</tr>
 					<?php 
 					$user_id = $row['user_id'];
 					$username = $row['username'];
-			        $sql="SELECT * FROM history_view";
+			        $sql="SELECT b.donation_title, a.donation_amount, a.pay, a.donation_date FROM donationstatus a, donation b WHERE a.donation_id = b.donation_id";
 			        $result = mysqli_query($conn,$sql);
 			        if ($result == TRUE) {
 			            $no = 0;
@@ -80,7 +80,6 @@ if ($row == 0)
 						<td><?php echo $row['donation_amount']; ?></td>
 						<td><?php echo $row['pay']; ?></td>
 						<td><?php echo $row['donation_date']; ?></td>
-						<td><?php echo $row['username']; ?></td>
 					</tr>
 					<?php
 						}}
@@ -95,13 +94,12 @@ if ($row == 0)
 				</div>
 			</div>
 				</center>
+				<br><br><br><br><br>
 			</article>
 		</section>
 		<footer>
 			<p>	&copy; Virtual Gift4U, Malaysia</p>
 		</footer>
-		
-
 	</body>
 </html>
 
