@@ -72,7 +72,7 @@ echo '<script language="javascript"> window.location.href="../homepage.php "</sc
 				<div class="dropdown-container">
 				    <a href="admin_donationapp.php">Donation Approval</a>
 				    <a href="admin_donationlist.php">List Donation</a>
-					<a href="admin_donationlisttry.php">Donation Report</a>
+					<a href="admin_donationlisttry.php">Donation History</a>
 				</div>
 			</li>
 			<li><a href="admin_suggestion.php"><i class="fas fa-comments"></i>  View Suggestion</a></li>
@@ -179,7 +179,38 @@ echo '<script language="javascript"> window.location.href="../homepage.php "</sc
 
 							}
 							?>
-							<p style=" color:grey;"><i><?php echo $title?> : RM <?php echo $helo?> / <?php echo $goal?></i></p></div>
+							<p style=" color:grey;"><i><?php echo $title?> : RM <?php echo $helo?> / <?php echo $goal?></i></p>
+							<?php
+							$sql = "SELECT SUM(donation_amount) FROM donationstatus WHERE donation_id = '13'";
+							$result = mysqli_query($conn, $sql) or die ("Error running MySQL query");
+
+
+							//$result = mysqli_query("SELECT * FROM user") or die ("Error running MySQL query");
+
+							while($row = mysqli_fetch_assoc($result))
+							{
+
+								$helo = $row['SUM(donation_amount)'];
+
+							}
+							?>
+							
+							<?php
+							$sql = "SELECT donation_goal, donation_title FROM donation WHERE donation_id = '13'";
+							$result = mysqli_query($conn, $sql) or die ("Error running MySQL query");
+
+
+							//$result = mysqli_query("SELECT * FROM user") or die ("Error running MySQL query");
+
+							while($row = mysqli_fetch_assoc($result))
+							{
+
+								$goal = $row['donation_goal'];
+								$title = $row['donation_title'];
+
+							}
+							?>
+							<p><i><?php echo $title?> : RM <?php echo $helo?> / <?php echo $goal?></i></p></div>
 				<h1>Donation List</h1>
 				<!--<center>
 					<form action="admin_donationlistsearch.php" method="post" class="carian">

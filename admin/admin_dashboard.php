@@ -43,7 +43,7 @@ echo '<script language="javascript"> window.location.href="../homepage.php "</sc
 				<div class="dropdown-container">
 				    <a href="admin_donationapp.php">Donation Approval</a>
 				    <a href="admin_donationlist.php">List Donation</a>
-					<a href="admin_donationlisttry.php">Donation Report</a>
+					<a href="admin_donationlisttry.php">Donation History</a>
 				</div>
 			</li>
 			<li><a href="admin_suggestion.php"><i class="fas fa-comments"></i>  View Suggestion</a></li>

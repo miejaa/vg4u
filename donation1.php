@@ -84,8 +84,8 @@
 	
 					 echo "<tr>";
 
-							echo"<td><a href='ppedonation.php?donation_id=".$row['donation_id']."'>".$row['donation_title']."</td>";
-							echo"<td><a href='ppedonation.php?donation_id=".$row['donation_id']."'>".$row['donation_region']."</td>";
+							echo"<td><a href='paydonation.php?donation_id=".$row['donation_id']."'>".$row['donation_title']."</td>";
+							echo"<td><a href='paydonation.php?donation_id=".$row['donation_id']."'>".$row['donation_region']."</td>";
 
 					 echo "</tr>";
 
@@ -110,12 +110,12 @@
 					//$result = mysqli_query("SELECT * FROM user") or die ("Error running MySQL query");
 					while($row = mysqli_fetch_assoc($result))
 					{
-						
-						echo "<a href='ppedonation.php?donation_id=".$row['donation_id']."'>";
+						//echo "<a href='paydonation.php?donation_id=".$row['donation_id']."'>";
 						echo "<div class='flex-item-left'>";
-						echo '<img src = "data:image;base64,' .base64_encode($row['donation_image']).'" alt="" style="width:220px; height:220px;">';
+						echo '<img src = "data:image;base64,' .base64_encode($row['donation_image']).'" alt="" style="width:400px; height:400px;">';
 						echo "<p><b>".$row['donation_title']."</b></p>";
 						echo "<p>".$row['donation_region']."</p>";
+						echo "<button><a href='paydonation.php?donation_id=".$row['donation_id']."'>Donate here</button>";
 						echo "</div></a>";
 						echo "<br>";
 					}

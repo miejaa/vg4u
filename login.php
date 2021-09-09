@@ -36,7 +36,7 @@
               <input type="checkbox" checked="checked" name="remember"> Remember me
               </label>
               <button type="submit"  name="btnLogin">Login</a></button>
-              <span class="psw">Forgot <a href="#">password?</a></span>
+              <span class="psw">Forgot <a href="forgotpassword.php">password?</a></span>
 
             </form>
         </div>

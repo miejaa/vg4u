@@ -34,36 +34,12 @@ if ($row == 0)
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script src="javaku.js"></script>
 		<script src="../assets/scripts/jquery.min.js"></script>
+		<!-- Load Stripe.js on your website. -->
+		<script src="https://js.stripe.com/v3/"></script>
 </head>
 	<body>
-	<script src="https://js.stripe.com/v3/"></script>
-	
-	 <script type="text/javascript">
-      // Create an instance of the Stripe object with your publishable API key
-      var stripe = Stripe('pk_test_51J2H3aEhFkNjQZmTEGNAMdaRCOvyV2d8KENHRiCJ95l9dM7w6Wq9zoDVlfdfv6Qll8pvNN1ZgU5gDAad4mVmqLBY00wP5COo4O');
-      var session = "<?php echo $session['donation_id']; ?>"
-
-        // Create a new Checkout Session using the server-side endpoint you
-        // created in step 3.
-      
-       stripe.redirectToCheckout({ sessionId: session })
-       
-        .then(function(result) {
-          // If `redirectToCheckout` fails due to a browser or network
-          // error, you should display the localized error message to your
-          // customer using `error.message`.
-          if (result.error) {
-            alert(result.error.message);
-          }
-        })
-        .catch(function(error) {
-          console.error('Error:', error);
-        });
-     
-    </script>
-	
 		<?php
-							$sql = "SELECT SUM(donation_amount) FROM donationstatus WHERE donation_id='".$_GET['donation_id']."'";
+							$sql = "SELECT SUM(donation_amount) FROM donationstatus";
 							$result = mysqli_query($conn, $sql) or die ("Error running MySQL query");
 
 
@@ -78,7 +54,7 @@ if ($row == 0)
 							?>
 							
 							<?php
-							$sql = "SELECT donation_goal FROM donation WHERE donation_id='".$_GET['donation_id']."'";
+							$sql = "SELECT donation_goal FROM donation";
 							$result = mysqli_query($conn, $sql) or die ("Error running MySQL query");
 
 
@@ -99,8 +75,7 @@ if ($row == 0)
 			  	<a href="news1.php">News</a>
 			  	<a href="ngo1.php">NGOs</a>
 			  	<!--<a  href="login.php"><i class="fas fa-user-circle"></i></a> -->
-				<a style="float: right" type="button" class="logoutbtn" onclick="window.location.href='includes/logout.php'">Log Out</button></a>
-				<a style="float: right" href="profile.php"><?php echo $_SESSION["username"]; ?></a>
+				
 			</div>
 		</nav>
 		<section>
@@ -144,59 +119,12 @@ if ($row == 0)
 							<p class="fstyle"><b>Donation Type: </b><?php echo  $row['donation_type']; ?> </p>
 							<p class="fstyle"><b>Donation Region: </b><?php echo  $row['donation_region']; ?> </p>
 							<p class="fstyle"><b>Donation Start Date: </b><?php echo  $row['donation_date']; ?> </p>
-							
-							<button onclick="document.getElementById('donatefill').style.display='block'">Donate</button>	
-							<div id="donatefill" class="modal">
-							  <span onclick="document.getElementById('donatefill').style.display='none'" class="close" title="Close Modal">&times;</span>
-								<?php
-							$sql = "SELECT * FROM donation WHERE donation_id='".$_GET['donation_id']."'";
-							$result = mysqli_query($conn, $sql) or die ("Error running MySQL query");
-							while($row = mysqli_fetch_assoc($result))
-							{
-								 // echo "<a href='ppedonation.php?donation_id=".$row['donation_id']."'>";
-							  echo "<form class='modal-content' action='includes/donation_action.php?donation_id=".$row['donation_id']."'  method='POST'>";
-							}
-								  
-								  ?>
-
-								  <?php
-							$sql1 = "SELECT * FROM users WHERE user_id='".$_SESSION['user_id']."'";
-							$result1 = mysqli_query($conn, $sql1) or die ("Error running MySQL query");
-							while($row1 = mysqli_fetch_assoc($result1))
-							{
-								?>
-							    <div class="form-container">
-								
-							      	<p>Select Payment Method</p>
-							     	<hr>
-							        <input type="radio" id="on9" name="pay" value="Online Banking-Malaysia" required>
-									<label for="Online Banking-Malaysia">Online Banking-Malaysia</label>
-									<input type="radio" id="paypal" name="pay" value="Paypal" required>
-									<label for="Paypal">Paypal</label><br>
-
-									<p>Personal Info</p>
-							     	<hr>
-								    <label for="name"><b>Full Name &#42;</b></label>
-								    <input type="text" value="<?php echo $row1['user_fname']?>" name="name" required>
-
-								    <label for="phone"><b>Phone Number</b></label>
-								    <input type="text" value="<?php echo $row1['phone']?>" name="phone">
-								    
-								    <label for="amount"><b>RM </b></label>
-								    <input type="number" min="10" max="50" name="amount" step="any" placeholder="Custom Amount" required>
-
-							      	<div class="clearfix">
-							        <button type="button" onclick="document.getElementById('donatefill').style.display='none'" class="cancelbtn" style="background-color: IndianRed">Cancel</button>
-									<!-- <button type="submit"><a href="resit.php">Donate</a></button>-->
-							    	<button  class="signupbtn" type="submit" name="submit" >Donate</button>
-							      </div>
-							    </div>
-							  </form>
+							<center>
+							<button style="width: 30%" data-checkout-mode="payment" data-price-id="price_1JQ59sEhFkNjQZmT5txaZmvs">Donate RM 5</button>
+							<button style="width: 30%" data-checkout-mode="payment" data-price-id="price_1JQ59sEhFkNjQZmTOpFwswa4">Donate RM 10</button>
+							<button style="width: 30%" data-checkout-mode="payment" data-price-id="price_1JQ59sEhFkNjQZmTTHICn11S">Donate RM 50</button>
+							</center>
 							<?php } ?>
-
-		<?php } ?>
-							</div>
-					
 							</div>
 						</div>
 
@@ -208,6 +136,49 @@ if ($row == 0)
 		<footer>
 			<p>	&copy; Virtual Gift4U, Malaysia</p>
 		</footer>
+		<script>
+      // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
+      var PUBLISHABLE_KEY = 'pk_test_51J2H3aEhFkNjQZmTEGNAMdaRCOvyV2d8KENHRiCJ95l9dM7w6Wq9zoDVlfdfv6Qll8pvNN1ZgU5gDAad4mVmqLBY00wP5COo4O';
+      // Replace with the domain you want your users to be redirected back to after payment
+      var DOMAIN = location.href.replace(/[^/]*$/, '');
+
+      if (PUBLISHABLE_KEY === 'pk_test_51J2H3aEhFkNjQZmTEGNAMdaRCOvyV2d8KENHRiCJ95l9dM7w6Wq9zoDVlfdfv6Qll8pvNN1ZgU5gDAad4mVmqLBY00wP5COo4O') {
+        console.log(
+          'Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys'
+        );
+      }
+
+      var stripe = Stripe(PUBLISHABLE_KEY);
+
+      // Handle any errors from Checkout
+      var handleResult = function (result) {
+        if (result.error) {
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      };
+
+      document.querySelectorAll('button').forEach(function (button) {
+        button.addEventListener('click', function (e) {
+          var mode = e.target.dataset.checkoutMode;
+          var priceId = e.target.dataset.priceId;
+          var items = [{ price: priceId, quantity: 1 }];
+
+          // Make the call to Stripe.js to redirect to the checkout page
+          // with the sku or plan ID.
+          stripe
+            .redirectToCheckout({
+              mode: mode,
+              lineItems: items,
+              successUrl:
+                DOMAIN + 'resit.php?session_id={CHECKOUT_SESSION_ID}',
+              cancelUrl:
+                DOMAIN + 'donation.php?session_id={CHECKOUT_SESSION_ID}',
+            })
+            .then(handleResult);
+        });
+      });
+    </script>
 	</body>
 </html>
 <?php

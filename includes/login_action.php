@@ -4,7 +4,6 @@
 <meta charset="utf-8">
 <title>Virtual Gift4U.com</title>
 </head>
-
 <body>
 
 <?php

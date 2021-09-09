@@ -75,6 +75,13 @@ if ($row == 0)
 					<p>Share some tips for us to improve and makes this website a better place for you.</p>
 					<br>
 				</div>
+				<div class="container4">
+						<center>
+							<p class="map"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1bgXU1ik24HdrqnvFeMCK_GLoJYp_LrTL" width="640" height="450"></iframe></p>
+							<h1>Distribution Locater</h1>
+							<p class="text">Help in distributing donations to the <br> respective organization.</p>
+						</center>
+				</div>
 				</div>
 			</article>
 		</section>

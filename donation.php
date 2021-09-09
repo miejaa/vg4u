@@ -75,17 +75,19 @@
 
 				$sql = "SELECT * FROM donation WHERE donation_status = 'Approved';";
 				$result = mysqli_query($conn, $sql) or die ("Error running MySQL query");
-			
+							
 				//$result = mysqli_query("SELECT * FROM user") or die ("Error running MySQL query");
 				while($row = mysqli_fetch_assoc($result))
 				{				
-					echo "<a href='ppedonation.php?donation_id=".$row['donation_id']."'>";
+					//echo "<a href='ppedonation.php?donation_id=".$row['donation_id']."'>";
 					echo "<div class='flex-item-left'>";
-					echo '<img src = "data:image;base64,' .base64_encode($row['donation_image']).'" alt="" style="width:220px; height:220px;">';
+					echo '<img src = "data:image;base64,' .base64_encode($row['donation_image']).'" alt="" style="width:400px; height:400px;">';
 					echo "<p><b>".$row['donation_title']."</b></p>";
 					echo "<p>".$row['donation_region']."</p>";
+					echo "<button><a href='ppedonation.php?donation_id=".$row['donation_id']."'>Donate here</button>";
 					echo "</div></a>";
 					echo "<br>";
+					
 				}
 				//Closes specified connection
 				//mysql_close($conn);

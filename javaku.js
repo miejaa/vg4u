@@ -37,4 +37,20 @@ function myFunction2() {
 			    modal.style.display = "none";
 			  }
 			}
+			
+function selectTitle(){
+	
+	var x = document.getElementByID("donation").value;
+	
+	$.ajax({
+		url:"showDonation.php",
+		method: "POST",
+		data:{
+			donation_id : x
+		},
+		success:function(data){
+			$("#ans").html(data);
+		}
+	})
+}
 	

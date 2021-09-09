@@ -9,8 +9,8 @@ session_start();
     $donation_type = $_POST['donation_type'];
     $fileToUpload = addslashes(file_get_contents($_FILES['fileToUpload']['tmp_name']));
     $donation_status="Not approve yet";
-    
-$conn = mysqli_connect('localhost', 'root', '', 'munity');
+
+$conn = mysqli_connect('vg4u.cfjqjsjwvoi4.ap-southeast-1.rds.amazonaws.com', 'admin', 'vg4u1234', 'vg4u');
 if(!$conn) {
   die ("Connection Failed : " . mysqli_connect_error());
 }

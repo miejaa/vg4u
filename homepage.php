@@ -93,13 +93,14 @@
 								//Closes specified connection
 								//mysql_close($conn);
 							?>
+							<!--<div class="lastupdated">-->
 							<div class="lastupdated">
 								<p><i>last updated:<p id="demo"></p></i></p>
 								<script>
 									const d = new Date();
 									document.getElementById("demo").innerHTML = d;
 								</script>
-							</div>
+							</div>	
 					</div>				
 				</div>
 				</center>

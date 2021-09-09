@@ -64,15 +64,13 @@
 					<p>Share some tips for us to improve and makes this website a better place for you.</p>
 					<br>
 				</div>
-				<!--<div class="container4">
-					<div class="border">
+				<div class="container4">
 						<center>
-							<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16300243.318149967!2d100.55885159479593!3d4.111215970346342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3034d3975f6730af%3A0x745969328211cd8!2sMalaysia!5e0!3m2!1sen!2smy!4v1630304777261!5m2!1sen!2smy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
-							<h1>Our Location</h1>
-							<p>Our distribution location is located in Malaysia.</p>
+							<p class="map"><iframe src="https://www.google.com/maps/d/u/0/embed?mid=1bgXU1ik24HdrqnvFeMCK_GLoJYp_LrTL" width="640" height="450"></iframe></p>
+							<h1>Distribution Locater</h1>
+							<p class="text">Help in distributing donations to the <br> respective organization.</p>
 						</center>
-					</div>
-				</di>-->
+				</div>
 				</div>
 			</article>
 		</section>

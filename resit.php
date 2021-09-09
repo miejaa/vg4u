@@ -31,6 +31,7 @@ if ($row == 0)
 
 <body>
 <section class="resithead">
+<center>
 <h1>Thank You For Donating <br><?php echo $_SESSION["username"]; ?></h1>
 <img id="tangann" src="images/olive.png" width="100" height="100" alt="bannerresit"/> 
 </section>
@@ -42,9 +43,14 @@ if ($row == 0)
 
 <button onclick="window.print()"><i class="fa fa-download"></i> Download</button>
 <a href="donation1.php"><button style="background-color: IndianRed"> Return</button></a>
+</center>
 <br><br>
 </div>
 </div>
+<br><br><br><br>
+	<footer>
+			<p>	&copy; Virtual Gift4U, Malaysia</p>
+	</footer>	
 
 </body>
 </html>
